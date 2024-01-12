@@ -21,12 +21,11 @@ describe("Socket.IO Server Tests", () => {
     });
 
     afterAll(() => {
-        io.close();
-        clientSocket.disconnect();
+        io.close(); 
     });
 
     test("should create room and notify userJoined", (done) => {
         clientSocket.emit("createRoom", "room1", "user123");
-        done();
+        done(); 
     });
 });
